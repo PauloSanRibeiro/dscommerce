@@ -1,4 +1,4 @@
-package br.com.prsribeiro.dscommerce.entities;
+	package br.com.prsribeiro.dscommerce.entities;
 
 import java.time.Instant;
 import java.util.HashSet;
