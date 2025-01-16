@@ -1,12 +1,23 @@
 package br.com.prsribeiro.dscommerce.dto;
 
 import br.com.prsribeiro.dscommerce.entities.Product;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 
 public class ProductDTO {
 
 	private Long id;
+
+	@Size(min = 3, max = 80, message = "Size between 3 and 80!")
+	@NotBlank(message = "Requerido!")
 	private String name;
+
+	@Size(min = 10, message = "Size min 10!")
+	@NotBlank(message = "Requerido!")
 	private String description;
+
+	@Positive(message = "Value Positive")
 	private Double price;
 	private String imgUrl;
 
